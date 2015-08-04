@@ -1,4 +1,6 @@
-resources
+ignore_resources
+node_modules
 *.sublime-workspace
 *.sublime-project
+
 
