@@ -1,0 +1,26 @@
+{
+  "list": [
+    {
+      "type" : "slider",
+      "id" : "flexslider",
+      "name" : "flexslider",
+      "des" : "自适应轮播图"
+      },
+    {
+      "type" : "modal",
+      "id" : "amazeModal",
+      "name" : "amazeModal",
+      "des" : "支持css3动画效果的弹层"
+    }
+  ],
+  "type":[
+    {
+      "title" : "图片轮播",
+      "tag" : "slider"
+    },
+    {
+      "title" : "弹层/提示",
+      "tag" : "modal"
+    }
+  ]
+}

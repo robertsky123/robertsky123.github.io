@@ -1,7 +1,9 @@
 define([
   'app',
   'controller/homeController',
-  'controller/libsListController'
+  'controller/libsListController',
+  'controller/libsDetailController',
+  'controller/aboutusController'
   // 'modules/flyer-plaza/index',
 ], function (app) {
   app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -24,6 +26,18 @@ define([
         templateUrl: '/views/libsList.html',
         controller: 'libsListController',
         pageTitle: '前端组件类库'
+      })
+      .state('libs.detail', {
+        url: '/:id',
+        templateUrl: '/views/libsList.detail.html',
+        controller: 'libsDetailController',
+        pageTitle: '前端组件类库'
+      })
+      .state('aboutus', {
+        url: '/aboutus',
+        templateUrl: '/views/aboutUs.html',
+        controller: 'aboutUsController',
+        pageTitle: '关于我们'
       });
 
   }]);

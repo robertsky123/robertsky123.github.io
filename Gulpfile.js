@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 gulp.task('livereload', function() {
     livereload.listen({ basePath: '.' });
 
-    gulp.src(['css/**/*.css','js/**/*.js','index_dev.html','view/**/*.html'], {read: false})
+    gulp.src(['css/**/*.css','js/**/*.js','index_dev.html','views/**/*.html'], {read: false})
     .pipe(watch())
     .pipe(livereload());
 

@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title ng-bind="$state.current.pageTitle + ' | 前端资源库 -- F2Ers become effective'"> </title>
+    <title ng-bind="$state.current.pageTitle + ' | SLibs -- F2Ers become effective'"> </title>
 
     <link href="css/bootstrap3.35.css" rel="stylesheet">
     <link href="css/nprogress.css" rel="stylesheet">
@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" ui-sref="home">前端资源库</a>
+                <a class="navbar-brand" ui-sref="home">SLibs</a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -36,7 +36,7 @@
                         <a ui-sref="libs"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>类库组件</a>
                     </li>
                     <li ui-sref-active="active">
-                        <a href="#"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span>关于我们</a>
+                        <a ui-sref="aboutus"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span>关于我们</a>
                     </li>
                 </ul>
             </div>
@@ -45,11 +45,15 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
-
-        <div ui-view class="page-content"></div>
-
-    </div>
+    <div ui-view class="page-content"></div>
+    <!-- 网站配置 -->
+    <script>
+      window.SITE_CONFIG = {
+          VERSION: '0.0.1',
+          MODAL_PATH: '/modal/',
+          COLLECTION_PATH: '/collections/'
+      };
+    </script>
 
     <!-- build:<name> -->
     <script src="js/libs/jquery2.1.4/jquery.js"></script>

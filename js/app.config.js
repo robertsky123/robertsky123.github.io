@@ -9,6 +9,16 @@ define(['app'], function (app) {
       });
 
       $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+        var statName = toState.name;
+
+        //添加不同的背景
+        if(statName.indexOf("libs") !== -1){
+          $("body").attr("class","pg-libslist");
+        }else if(statName.indexOf("aboutus") !== -1){
+          $("body").attr("class","pg-aboutus");
+        }else{
+          $("body").attr("class","");
+        }
         NProgress.done();
       });
     }

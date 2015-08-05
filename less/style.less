@@ -1,5 +1,17 @@
+@import "modules/animate.less";
+html{
+  overflow-x:hidden;
+}
 body{
   padding:50px 0 0 0;
+  background: url("/images/swirl_pattern.png") repeat;
+  font-family: "Microsoft Yahei";
+}
+body.pg-libslist{
+  background-image:url("/images/diamond_upholstery.png");
+}
+body.pg-aboutus{
+  background-image:url("/images/gplaypattern.png");
 }
 a:focus{
   text-decoration: none;
@@ -12,10 +24,54 @@ a:focus{
 
   .navbar-brand{
     color:#F1422D;
+    &:hover{
+      color:#F1422D;
+      text-shadow:1px 1px 5px #F1422D;
+    }
   }
 
   .navbar-nav span{
     margin-right: 5px;
     top: 3px;
+  }
+}
+
+/*site-intro*/
+.site-intro{
+  margin: 10px;
+  background: #fff;
+  border:1px solid #dfdfdf;
+  padding: 30px 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  .i_title{
+    color:#F34021;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+  }
+  .i_tip1{
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+    -webkit-animation-delay: .75s; 
+    animation-delay: .75s;
+  }
+  .i_tip2{
+    -webkit-animation-name: bounceInRight;
+    animation-name: bounceInRight;
+    -webkit-animation-delay: 1.25s; 
+    animation-delay: 1.25s;
+  }
+  .i_link{
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+    -webkit-animation-delay: 2.25s; 
+    animation-delay: 2.25s;
+  }
+  .i_link{
+    margin-top: 20px;
   }
 }
