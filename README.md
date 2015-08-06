@@ -18,5 +18,6 @@
 * [gulp-less](https://www.npmjs.com/package/gulp-less) -- less css编译器
 * [gulp-watch](https://github.com/floatdrop/gulp-watch/blob/master/docs/readme.md)
 * [gulp-livereload](https://www.npmjs.com/package/gulp-livereload)
+* [plumber](https://github.com/floatdrop/gulp-plumber) -- fix node pipe error
 * [gulp-webserver](https://www.npmjs.com/package/gulp-livereload) -- 本地服务器自带livereload
 * [autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) -- 补全样式prefix

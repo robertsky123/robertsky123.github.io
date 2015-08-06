@@ -19,6 +19,9 @@ define(['app'], function (app) {
         }else{
           $("body").attr("class","");
         }
+
+        //收起移动端下拉菜单
+        $(".collapse").collapse('hide');
         NProgress.done();
       });
     }

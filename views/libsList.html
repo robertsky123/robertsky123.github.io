@@ -1,7 +1,7 @@
 <div ui-view>
   <div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 col-lg-3" ng-repeat="lib in libLists">
+    <div class="row libs-list">
+        <div class="col-sm-6 col-md-4 col-lg-3 l_cell animated" ng-repeat="lib in libLists" style="-webkit-animation-delay:{{$index * 500}}ms;animation-delay:{{$index * 500}}ms">
             <div class="thumbnail">
                 <a href="{{lib.name}}" title="{{lib.name}}">{{lib.name}}</a>
                 <div class="caption">
@@ -15,5 +15,7 @@
             </div>
         </div>
     </div>
+    <a href="javascript:;" ng-click="filter()">1234</a>
+    <a href="javascript:;" ng-click="filters()">1234</a>
   </div>
 </div>

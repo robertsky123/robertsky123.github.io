@@ -10,7 +10,8 @@
     "gulp-watch": "~0.6.4",
     "gulp-livereload": "~3.0.2",
     "gulp-less": "~3.0.3",
-    "gulp-webserver": "~0.9.1"
+    "gulp-webserver": "~0.9.1",
+    "gulp-plumber": "^1.0.1"
   },
   "dependencies": {}
 }

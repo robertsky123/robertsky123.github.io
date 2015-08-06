@@ -2,6 +2,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+  plumber = require('gulp-plumber'),
   watch = require('gulp-watch'),
   less = require('gulp-less'),
   livereload = require('gulp-livereload'),
@@ -21,6 +22,7 @@ gulp.task('livereload', function() {
 gulp.task('less', function() {
 
     return gulp.src('./less/*.less')
+      .pipe(plumber())
       .pipe(watch({ emit: 'all' }))
       .pipe(less())
       .pipe(gulp.dest('./css'));
