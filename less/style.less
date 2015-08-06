@@ -80,6 +80,7 @@ a:focus{
 
 /*liblist*/
 .libs-list{
+    padding:15px 0 0 0;
    .l_cell.ng-enter{
       -webkit-animation-name: bounceIn;
       animation-name: bounceIn;
@@ -91,13 +92,11 @@ a:focus{
   }
 }
 
-
-.insert-enter {
-          -webkit-transform:scale(0);
-          -webkit-transition-property: all;
-          -webkit-transition-timing-function: ease-out-cubic;
-          -webkit-transition-duration: 400ms;
-        }
-        .insert-enter.insert-enter-active {
-          -webkit-transform:scale(1);
-        }
+.lib-box.ng-enter{
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+.lib-box.ng-leave{
+  -webkit-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft;
+}

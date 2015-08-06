@@ -306,6 +306,30 @@
     transform: scale3d(0.3, 0.3, 0.3);
   }
 }
+@-webkit-keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
 html {
   overflow-x: hidden;
 }
@@ -380,6 +404,9 @@ a:focus {
   margin-top: 20px;
 }
 /*liblist*/
+.libs-list {
+  padding: 15px 0 0 0;
+}
 .libs-list .l_cell.ng-enter {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
@@ -389,12 +416,11 @@ a:focus {
   animation-name: bounceOut;
   display: none;
 }
-.insert-enter {
-  -webkit-transform: scale(0);
-  -webkit-transition-property: all;
-  -webkit-transition-timing-function: ease-out-cubic;
-  -webkit-transition-duration: 400ms;
+.lib-box.ng-enter {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
 }
-.insert-enter.insert-enter-active {
-  -webkit-transform: scale(1);
+.lib-box.ng-leave {
+  -webkit-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft;
 }
