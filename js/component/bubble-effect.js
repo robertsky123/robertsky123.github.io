@@ -20,7 +20,7 @@
 
         // create particles
         circles = [];
-        for(var x = 0; x < width*0.002; x++) {
+        for(var x = 0; x < width*0.05; x++) {
             var c = new Circle();
             circles.push(c);
         }
