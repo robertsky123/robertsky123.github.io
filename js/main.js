@@ -1,10 +1,12 @@
+//bubble effect
 require.config({
     baseUrl: "/js/",
     paths: {
         app: "app",
         appRoute: "app.route",
-        appConifg: 'app.config'
-    },
+        appConifg: 'app.config',
+        userInfo: 'component/userInfo'
+    }
     //shim: {},
     //priority: []
 });

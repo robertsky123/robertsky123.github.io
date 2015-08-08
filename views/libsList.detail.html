@@ -1,5 +1,9 @@
-<div class="container">
-<div class="detail" ng-bind-html=content>
+<div class="container lib-detail">
+<div class="lib_wauthor">
+    <a href=""><img class="animated" ng-src="/images/avatar/{{author.avatar}}" alt=""></a>
+    <p>整理者：<a href=""><span ng-bind="author.name"></span></a></p>
+</div>
+<div class="lib_content" ng-bind-html=content>
     
 </div>
 </div>

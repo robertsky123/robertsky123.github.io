@@ -1,32 +1,50 @@
 {
   "list": [
     {
-      "type" : "modal",
-      "id" : "amazeModal",
-      "name" : "amazeModal",
-      "des" : "支持css3动画效果的弹层"
-    },
-    {
-      "type" : "modal",
-      "id" : "amazeModal",
-      "name" : "amazeModal",
-      "des" : "支持css3动画效果的弹层"
+      "type" : "carousel",
+      "id" : "Owl Carousel",
+      "name" : "Owl Carousel",
+      "des" : "多种旋转木马，支持响应式布局",
+      "authorId": "1"
     },
     {
       "type" : "slider",
-      "id" : "flexslider",
-      "name" : "flexslider",
-      "des" : "自适应轮播图"
+      "id" : "unslider",
+      "name" : "unslider",
+      "des" : "自适应轮播图",
+      "authorId": "2"
+      },
+    {
+      "type" : "animate",
+      "id" : "jQuery Transit",
+      "name" : "jQuery Transit",
+      "des" : "jquery css3动销增强库",
+      "authorId": "3"
+      },
+    {
+      "type" : "modal",
+      "id" : "jquery modal",
+      "name" : "jquery modal",
+      "des" : "jquery 弹框,支持ajax",
+      "authorId": "4"
       }
   ],
-  "type":[
+  "typeList":[
     {
       "title" : "图片轮播",
-      "tag" : "slider"
+      "type" : "slider"
     },
     {
-      "title" : "弹层/提示",
-      "tag" : "modal"
+      "title" : "旋转木马",
+      "type" : "carousel"
+    },
+    {
+      "title" : "动效",
+      "type" : "animate"
+    },
+    {
+      "title" : "弹框/提示",
+      "type" : "modal"
     }
   ]
 }

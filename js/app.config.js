@@ -1,6 +1,6 @@
 define(['app'], function (app) {
-  app.run([ '$rootScope', '$state', '$stateParams',
-    function ($rootScope, $state, $stateParams) {
+  app.run([ '$rootScope', '$state', '$stateParams', "$anchorScroll",
+    function ($rootScope, $state, $stateParams, $anchorScroll) {
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;
 
@@ -9,6 +9,8 @@ define(['app'], function (app) {
       });
 
       $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+        //滚动条返回头部
+        $anchorScroll();
         var statName = toState.name;
 
         //添加不同的背景

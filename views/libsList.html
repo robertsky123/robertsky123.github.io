@@ -1,12 +1,17 @@
 <div ui-view class="lib-box animated">
   <div class="container">
+    <div class="lib-types" style="transition-duration:0s;">
+        <a ng-repeat="type in types" href="javascript:;" ng-click="filter(type.type)" ng-class="{is_active:isActive(type.type)}">{{type.title}}</a>
+    </div>
     <div class="row libs-list">
         <div class="col-sm-6 col-md-4 col-lg-3 l_cell animated" ng-repeat="lib in libLists" style="-webkit-animation-delay:{{$index * 500}}ms;animation-delay:{{$index * 500}}ms">
             <div class="thumbnail">
-                <a href="{{lib.name}}" title="{{lib.name}}">{{lib.name}}</a>
-                <div class="caption">
+                <a class="l_title" ui-sref="libs.detail({id:lib.id,author:lib.author})">
+                    <p class="anilink anilink--mallki" href="#">{{lib.name}}<span data-letters="{{lib.name}}"></span><span data-letters="{{lib.name}}"></span></p>
+                </a>
+                <div class="caption l_caption">
                     <h3> 
-                    <a ui-sref="libs.detail({id:lib.id})" title="{{lib.name}}">{{lib.name}}</a>
+                    <a ui-sref="libs.detail({id:lib.id,author:lib.author})" title="{{lib.name}}">{{lib.name}}</a>
                   </h3>
                     <p>
                         {{lib.des}}
@@ -15,7 +20,7 @@
             </div>
         </div>
     </div>
-    <a href="javascript:;" ng-click="filter()">1234</a>
-    <a href="javascript:;" ng-click="filters()">1234</a>
+    <!-- <a href="javascript:;" ng-click="filter()">1234</a>
+    <a href="javascript:;" ng-click="filters()">1234</a> -->
   </div>
 </div>
