@@ -5,11 +5,12 @@ require.config({
         app: "app",
         appRoute: "app.route",
         appConifg: 'app.config',
-        userInfo: 'component/userInfo'
+        userInfo: 'component/userInfo',
+        bubbleEffect : 'component/bubble-effect'
     }
     //shim: {},
     //priority: []
 });
-require(["app", "appRoute", "appConifg"], function() {
+require(["app", "appRoute", "appConifg", 'bubbleEffect'], function() {
     angular.bootstrap(document, ["app"]);
 });
