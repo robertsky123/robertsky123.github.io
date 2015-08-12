@@ -21,3 +21,5 @@
 * [plumber](https://github.com/floatdrop/gulp-plumber) -- fix node pipe error
 * [gulp-webserver](https://www.npmjs.com/package/gulp-livereload) -- 本地服务器自带livereload
 * [autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) -- 补全样式prefix
+* [gulp-requirejs](https://www.npmjs.com/package/gulp-requirejs) -- 合并requirejs加载的模块
+

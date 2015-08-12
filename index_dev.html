@@ -8,10 +8,15 @@
     <meta name="author" content="">
 
     <title ng-bind="$state.current.pageTitle + ' | SLibs -- F2Ers become effective'"> </title>
-
+    
+    <!-- build:vendorcss build/css/vendor.css -->
     <link href="css/bootstrap3.35.css" rel="stylesheet">
     <link href="css/nprogress.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <!-- build:stylecss build/css/style.css -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- endbuild -->
 </head>
 
 <body>
@@ -55,9 +60,24 @@
           MODAL_PATH: '/modal/',
           COLLECTION_PATH: '/collections/'
       };
+      //对md文件版本单独控制
+        window.FILE_VERSION = {
+            "jquery modal" : {
+                "version" : "1.0"
+            },
+            "jQuery Transit" : {
+                "version" : "1.0"
+            },
+            "Owl Carousel" : {
+                "version" : "1.0"
+            },
+            "unslider" : {
+                "version" : "1.0"
+            }
+        };
     </script>
 
-    <!-- build:<name> -->
+    <!-- build:libjs build/js/lib.js -->
     <script src="js/libs/lodash3.10.1/lodash.js"></script>
     <script src="js/libs/jquery2.1.4/jquery.js"></script>
     <script src="js/libs/bootstrap3.35/bootstrap.js"></script>
@@ -71,9 +91,11 @@
     <script src="js/libs/angular-ui-route0.2.15/angular-ui-router.js"></script>
 
     <script src="js/libs/requirejs2.1.20/require.js"></script>
+    <!-- endbuild -->
 
-    <!-- main.js -->
+    <!-- build:appjs build/js/app.js -->
     <script src="js/main.js"></script>
+     <!-- endbuild -->
 
 </body>
 

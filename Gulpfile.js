@@ -2,7 +2,15 @@
 'use strict';
 
 var gulp = require('gulp'),
+  gulpsync = require('gulp-sync')(gulp),
+  gulpUtil = require('gulp-util'),
+  clean = require('gulp-clean'),
+  rename = require('gulp-rename'),
   uglify = require('gulp-uglify'),
+  usemin = require('gulp-usemin'),
+  minifyHtml = require('gulp-minify-html'),
+  minifyCss = require('gulp-minify-css'),
+  rev = require('gulp-rev'),
   plumber = require('gulp-plumber'),
   watch = require('gulp-watch'),
   less = require('gulp-less'),
@@ -43,27 +51,96 @@ gulp.task('webserver', function() {
 });
 
 
+gulp.task('cleanBuild', function () {
+    return gulp.src('build', {read: false})
+        .pipe(clean());
+});
+
+gulp.task('clean', function () {
+    return gulp.src('.tmp', {read: false})
+        .pipe(clean());
+});
+
+var filesToMoveTmp = [
+        './js/**/*.*',
+        './css/**/*.*',
+        'index_dev.html'
+    ];
+
+gulp.task('moveToTmp', function(){
+  // the base option sets the relative root for the set of files,
+  // preserving the folder structure
+  return gulp.src(filesToMoveTmp, { base: './' })
+  .pipe(gulp.dest('.tmp'));
+});
+
+//r.js 生成main.js
 gulp.task('requirejsBuild', function() {
     rjs({
-        baseUrl: './js/',
-        name : "main" ,
-        out: 'main.js',
-        shim: {
-            // standard require.js shim options 
-        },
-        paths: {
-            app: "app",
-            appRoute: "app.route",
-            appConifg: 'app.config'
-        }
-    })
-    .pipe(uglify())
-    .pipe(md5(10))
-    .pipe(gulp.dest('./public/')); // pipe it to the output DIR 
+            baseUrl: './js/',
+            name : "main" ,
+            out: 'main.js',
+            shim: {
+                // standard require.js shim options 
+            },
+            paths: {
+                app: "app",
+                appRoute: "app.route",
+                appConifg: 'app.config',
+                userInfo: 'component/userInfo',
+                bubbleEffect : 'component/bubble-effect'
+            }
+        })
+        //.pipe(uglify());
+          // .pipe(md5(10))
+        .pipe(gulp.dest('./.tmp/js/')); // pipe it to the output DIR 
 });
+
+
+gulp.task('usemin', function () {
+  return gulp.src('./.tmp/index_dev.html')
+      .pipe(usemin({
+        vendorcss: [minifyCss(), rev()],
+        stylecss: [minifyCss(), rev()],
+        html: [minifyHtml({empty: true})],
+        libjs: [uglify(), rev()],
+        appjs: [uglify(), rev()]
+      }))
+      .pipe(gulp.dest('.tmp/build/'));
+});
+
+gulp.task('rename', function () {
+   return gulp.src(".tmp/build/index_dev.html")
+          .pipe(rename("index.html"))
+          .pipe(gulp.dest(".tmp/build/"));
+});
+
+var filesToMoveBase = [
+        '.tmp/build/build/**/*.*',
+        '.tmp/build/index.html'
+    ];
+
+gulp.task('moveToBase', function(){
+  gulp.src('fonts/**/*.*', { base: './' })
+      .pipe(gulp.dest('./build'));
+  
+  return gulp.src(filesToMoveBase, { base: '.tmp/build/' })
+      .pipe(gulp.dest('./'));
+
+  
+});
+
 // The develop task
 gulp.task('default', ['webserver', 'less', 'livereload']);
 
-gulp.task('build',['requirejsBuild']);
+gulp.task('build',gulpsync.sync(['moveToTmp', 'requirejsBuild', 'usemin', 'rename', 'moveToBase', 'clean']));
+
+//gulp.task('build',gulpsync.sync(['moveToTmp', 'requirejsBuild', 'usemin']));
+
+gulp.task('go', ['rename']);
+
+
+
+
 //The deploy task
 //gulp.task('build', ['less', 'livereload']);

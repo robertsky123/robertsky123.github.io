@@ -1,87 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>前端资源库 -- F2Ers become effective</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap3.35.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <!-- Custom CSS -->
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>A Bootstrap Starter Template</h1>
-                <p class="lead">Complete with pre-defined file paths that you won't have to change!</p>
-                <ul class="list-unstyled">
-                    <li>Bootstrap v3.3.1</li>
-                    <li>jQuery v1.11.1</li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
-    <!-- build:<name> -->
-    <script src="js/libs/jquery2.1.4/jquery.js"></script>
-    <script src="js/libs/bootstrap3.35/bootstrap.js"></script>
-    <script src="js/libs/mark/marked.js"></script>
-
-    <script src="js/libs/angular1.2.28/angular.js"></script>
-    <script src="js/libs/angular1.2.28/angular-animate.js"></script>
-    <script src="js/libs/angular1.2.28/angular-sanitize.js"></script>
-    <script src="js/libs/angular-ui-route0.2.15/angular-ui-router.js"></script>
-
-    <script src="js/libs/requirejs2.1.20/require.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/main.js"></script>
-
-</body>
-
-</html>
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><meta name=description content><meta name=author content><title ng-bind="$state.current.pageTitle + ' | SLibs -- F2Ers become effective'"></title><link rel=stylesheet href=build/css/vendor-22bfbb7578.css><link rel=stylesheet href=build/css/style-c6e3730487.css></head><body><canvas id=js-bubble-canvas class=bubble-canvas></canvas><nav class="l-header navbar navbar-inverse navbar-fixed-top" role=navigation><div class=container><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#bs-example-navbar-collapse-1><span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span></button> <a class=navbar-brand ui-sref=home>SLibs</a></div><div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1><ul class="nav navbar-nav"><li ng-class="{active: $state.includes('libs')}"><a href=javascript:; ng-click="$state.go('libs',{'type':'all'},{'reload':true})"><span class="glyphicon glyphicon-star-empty" aria-hidden=true></span>类库组件</a></li><li ui-sref-active=active><a ui-sref=aboutus><span class="glyphicon glyphicon-tint" aria-hidden=true></span>关于我们</a></li></ul></div></div></nav><div ui-view class=page-content></div><script>
+      window.SITE_CONFIG = {
+          VERSION: '0.0.1',
+          MODAL_PATH: '/modal/',
+          COLLECTION_PATH: '/collections/'
+      };
+      //对md文件版本单独控制
+        window.FILE_VERSION = {
+            "jquery modal" : {
+                "version" : "1.0"
+            },
+            "jQuery Transit" : {
+                "version" : "1.0"
+            },
+            "Owl Carousel" : {
+                "version" : "1.0"
+            },
+            "unslider" : {
+                "version" : "1.0"
+            }
+        };
+    </script><script src=build/js/lib-163aa80059.js></script><script src=build/js/app-7f2fa70bdd.js></script></body></html>
