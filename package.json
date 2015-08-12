@@ -21,7 +21,8 @@
     "gulp-clean": "^0.3.1",
     "gulp-sync": "^0.1.4",
     "gulp-rename": "^1.2.2",
-    "gulp-util": "^3.0.6"
+    "gulp-util": "^3.0.6",
+    "gulp-imagemin": "^2.3.0"
   },
   "dependencies": {}
 }

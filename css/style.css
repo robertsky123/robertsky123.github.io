@@ -401,6 +401,21 @@ h5 {
 h6 {
   font-size: 14px;
 }
+/*browsehappy*/
+.browsehappy {
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: #dddedf;
+  text-align: center;
+  opacity: .98;
+}
+.browsehappy p {
+  font-size: 1.5em;
+  margin-top: 15%;
+}
 html {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -549,6 +564,12 @@ a:focus {
   -webkit-transition: color 0.5s 0.25s;
   transition: color 0.5s 0.25s;
   overflow: hidden;
+}
+.ie9 .anilink--mallki::before {
+  display: none;
+}
+.ie9 .anilink--mallki span::before {
+  color: #333;
 }
 .anilink--mallki::before {
   content: '';
