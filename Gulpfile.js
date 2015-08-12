@@ -16,7 +16,8 @@ var gulp = require('gulp'),
   less = require('gulp-less'),
   livereload = require('gulp-livereload'),
   webserver = require('gulp-webserver'),
-  md5 = require('gulp-md5'),
+  imagemin = require('gulp-imagemin'),
+  pngquant = require('imagemin-pngquant'),
 
   rjs = require('gulp-requirejs');
 
@@ -91,8 +92,6 @@ gulp.task('requirejsBuild', function() {
                 bubbleEffect : 'component/bubble-effect'
             }
         })
-        //.pipe(uglify());
-          // .pipe(md5(10))
         .pipe(gulp.dest('./.tmp/js/')); // pipe it to the output DIR 
 });
 
@@ -130,10 +129,20 @@ gulp.task('moveToBase', function(){
   
 });
 
+gulp.task('minImg', function(){
+   return gulp.src('images/**/*.*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('images'));
+});
+
 // The develop task
 gulp.task('default', ['webserver', 'less', 'livereload']);
 
-gulp.task('build',gulpsync.sync(['moveToTmp', 'requirejsBuild', 'usemin', 'rename', 'moveToBase', 'clean']));
+gulp.task('build',gulpsync.sync(['cleanBuild', 'moveToTmp', 'requirejsBuild', 'usemin', 'rename', 'moveToBase', 'clean', 'minImg']));
 
 //gulp.task('build',gulpsync.sync(['moveToTmp', 'requirejsBuild', 'usemin']));
 

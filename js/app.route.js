@@ -22,7 +22,7 @@ define([
         pageTitle: '首页',
       })
       .state('libs', {
-        url: '/libs?type&authorId',
+        url: '/libs?type',
         templateUrl: '/views/libsList.html',
         controller: 'libsListController',
         pageTitle: '前端组件类库',
