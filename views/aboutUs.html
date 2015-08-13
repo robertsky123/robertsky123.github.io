@@ -1,4 +1,10 @@
 <div class="about-us">
   <div class="container">
+    <div class="row author-list">
+      <div ng-repeat="author in authors" class="col-xs-6 col-sm-3 l_cell animated">
+        <div><img ng-src="/images/avatar/{{author.avatar}}" alt=""></div>
+        <p class="l_name">{{author.name}}</p>
+      </div>
+    </div>
   </div>
 </div>

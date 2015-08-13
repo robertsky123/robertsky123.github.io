@@ -142,14 +142,9 @@ gulp.task('minImg', function(){
 // The develop task
 gulp.task('default', ['webserver', 'less', 'livereload']);
 
-gulp.task('build',gulpsync.sync(['cleanBuild', 'moveToTmp', 'requirejsBuild', 'usemin', 'rename', 'moveToBase', 'clean', 'minImg']));
+gulp.task('build',gulpsync.sync(['cleanBuild', 'moveToTmp', 'requirejsBuild', 'usemin', 'rename', 'moveToBase', 'clean']));
 
 //gulp.task('build',gulpsync.sync(['moveToTmp', 'requirejsBuild', 'usemin']));
-
-gulp.task('go', ['rename']);
-
-
-
 
 //The deploy task
 //gulp.task('build', ['less', 'livereload']);
