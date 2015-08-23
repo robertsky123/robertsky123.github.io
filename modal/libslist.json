@@ -27,6 +27,90 @@
       "name" : "jquery modal",
       "des" : "jquery 弹框,支持ajax",
       "authorId": "4"
+      },
+    {
+      "type" : "carousel",
+      "id" : "Slick",
+      "name" : "Slick",
+      "des" : "基于jQuery,效果丰富",
+      "authorId": "4"
+      },
+    {
+      "type" : "carousel",
+      "id" : "OwlCarousel2",
+      "name" : "OwlCarousel2",
+      "des" : "支持图片延迟加载",
+      "authorId": "4"
+      },
+    {
+      "type" : "carousel",
+      "id" : "Flexisel",
+      "name" : "Flexisel",
+      "des" : "响应式的旋转木马",
+      "authorId": "4"
+      },
+    {
+      "type" : "slider",
+      "id" : "ResponsiveSlide",
+      "name" : "ResponsiveSlide",
+      "des" : "轻量级，响应式轮播",
+      "authorId": "4"
+      },
+    {
+      "type" : "slider",
+      "id" : "FlexSlider",
+      "name" : "FlexSlider",
+      "des" : "支持响应式",
+      "authorId": "4"
+      },
+    {
+      "type" : "slider",
+      "id" : "Flux-Slider",
+      "name" : "Flux-Slider",
+      "des" : "支持2d,3d效果",
+      "authorId": "4"
+      },
+    {
+      "type" : "slider",
+      "id" : "glide",
+      "name" : "glide",
+      "des" : "支持卡片式效果",
+      "authorId": "4"
+      },
+    {
+      "type" : "slider",
+      "id" : "ideal-image-slider",
+      "name" : "ideal-image-slider",
+      "des" : "响应式,css3优化",
+      "authorId": "4"
+      },
+    {
+      "type" : "modal",
+      "id" : "bootstrap modal",
+      "name" : "bootstrap modal",
+      "des" : "css3动效弹窗",
+      "authorId": "4"
+      },
+    {
+      "type" : "modal",
+      "id" : "sweetalert",
+      "name" : "sweetalert",
+      "des" : "替代Alert的漂亮的提示效果",
+      "authorId": "4"
+      },
+    {
+      "type" : "animate",
+      "id" : "Animate.css",
+      "name" : "Animate.css",
+      "des" : "css3动画效果库",
+      "authorId": "3"
+      },
+    {
+      "type" : "animate",
+      "id" : "spin.js",
+      "name" : "spin.js",
+      "des" : "css3动画效果库",
+      "authorId": "3"
       }
   ],
   "typeList":[
