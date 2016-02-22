@@ -49,6 +49,9 @@
                     <li ng-class="{active: $state.includes('libs')}">
                         <a href="javascript:;" ng-click="$state.go('libs',{'type':'all'},{'reload':true})"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>类库组件</a>
                     </li>
+                    <li ng-class="{active: $state.includes('snippets')}">
+                        <a href="javascript:;" ng-click="$state.go('snippets',{'type':'all'},{'reload':true})"><span class="glyphicon glyphicon-folder-close" aria-hidden="true"></span>代码片段</a>
+                    </li>
                     <li ui-sref-active="active">
                         <a ui-sref="aboutus"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span>关于我们</a>
                     </li>
@@ -61,64 +64,11 @@
     <!-- Page Content -->
     <div ui-view class="page-content"></div>
     <!-- 网站配置 -->
-    <script>
-      window.SITE_CONFIG = {
-          VERSION: '0.0.2',
-          MODAL_PATH: '/modal/',
-          COLLECTION_PATH: '/collections/'
-      };
-      //对md文件版本单独控制
-        window.FILE_VERSION = {
-            "jquery modal" : {
-                "version" : "1.0"
-            },
-            "jQuery Transit" : {
-                "version" : "1.0"
-            },
-            "Owl Carousel" : {
-                "version" : "1.0"
-            },
-            "unslider" : {
-                "version" : "1.0"
-            },
-            "Slick" : {
-                "version" : "1.0"
-            },
-            "OwlCarousel2" : {
-                "version" : "1.0"
-            },
-            "Flexisel" : {
-                "version" : "1.0"
-            },
-            "ResponsiveSlides" : {
-                "version" : "1.0"
-            },
-            "FlexSlider" : {
-                "version" : "1.0"
-            },
-            "Flux-Slider" : {
-                "version" : "1.0"
-            },
-            "glide" : {
-                "version" : "1.0"
-            },
-            "ideal-image-slider" : {
-                "version" : "1.0"
-            },
-            "bootstrap modal" : {
-                "version" : "1.0"
-            },
-            "sweetalert" : {
-                "version" : "1.0"
-            },
-            "Animate.css" : {
-                "version" : "1.0"
-            },
-            "spin.js" : {
-                "version" : "1.0"
-            }
-        };
-    </script>
+<script> 
+/*=include ./js/siteConfig.js */
+</script>
+
+    <script src="js/siteConfig.js"></script>
 
     <!-- build:libjs build/js/lib.js -->
     <script src="js/libs/lodash3.10.1/lodash.js"></script>

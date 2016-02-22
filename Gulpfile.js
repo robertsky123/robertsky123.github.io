@@ -18,6 +18,8 @@ var gulp = require('gulp'),
   webserver = require('gulp-webserver'),
   imagemin = require('gulp-imagemin'),
   pngquant = require('imagemin-pngquant'),
+  replace = require('gulp-replace'),
+  include = require("gulp-include"),
 
   rjs = require('gulp-requirejs');
 
@@ -95,9 +97,21 @@ gulp.task('requirejsBuild', function() {
         .pipe(gulp.dest('./.tmp/js/')); // pipe it to the output DIR 
 });
 
+gulp.task('uglifyConfig', function(){
+  return gulp.src('./js/siteConfig.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./.tmp/js/'));
+});
+
+gulp.task('includeConfig', function(){
+   return gulp.src(".tmp/index_dev.html")
+          .pipe(include())
+          .pipe(gulp.dest('.tmp'));
+});
 
 gulp.task('usemin', function () {
   return gulp.src('./.tmp/index_dev.html')
+      .pipe(replace('<script src="js/siteConfig.js"></script>', ' '))
       .pipe(usemin({
         vendorcss: [minifyCss(), rev()],
         stylecss: [minifyCss(), rev()],
@@ -142,7 +156,7 @@ gulp.task('minImg', function(){
 // The develop task
 gulp.task('default', ['webserver', 'less', 'livereload']);
 
-gulp.task('build',gulpsync.sync(['cleanBuild', 'moveToTmp', 'requirejsBuild', 'usemin', 'rename', 'moveToBase', 'clean']));
+gulp.task('build',gulpsync.sync(['cleanBuild', 'moveToTmp', 'requirejsBuild','uglifyConfig','includeConfig','usemin', 'rename', 'moveToBase', 'clean']));
 
 //gulp.task('build',gulpsync.sync(['moveToTmp', 'requirejsBuild', 'usemin']));
 

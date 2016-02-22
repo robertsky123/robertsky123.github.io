@@ -1,0 +1,17 @@
+{
+  "list": [
+    {
+      "type" : "build",
+      "id" : "gulp_rev_all",
+      "name" : "gulp-rev-all",
+      "des" : "根据文件依赖关系生成md5文件，同时修改对应路径",
+      "authorId": "1"
+    }
+  ],
+  "typeList":[
+    {
+      "title" : "构建工具",
+      "type" : "build"
+    }
+  ]
+}

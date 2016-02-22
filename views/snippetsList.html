@@ -6,12 +6,12 @@
     <div class="row libs-list">
         <div class="col-sm-6 col-md-4 col-lg-3 l_cell animated" ng-repeat="lib in libLists" style="-webkit-animation-delay:{{$index * 150}}ms;animation-delay:{{$index * 100}}ms">
             <div class="thumbnail">
-                <a class="l_title" ui-sref="libs.detail({id:lib.id})">
+                <a class="l_title" ui-sref="snippets.detail({id:lib.id})">
                     <p class="anilink anilink--mallki" href="#">{{lib.name}}<span data-letters="{{lib.name}}"></span><span data-letters="{{lib.name}}"></span></p>
                 </a>
                 <div class="caption l_caption">
                     <h3> 
-                    <a ui-sref="libs.detail({id:lib.id})" title="{{lib.name}}">{{lib.name}}</a>
+                    <a ui-sref="snippets.detail({id:lib.id})" title="{{lib.name}}">{{lib.name}}</a>
                   </h3>
                     <p>
                         {{lib.des}}

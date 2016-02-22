@@ -3,6 +3,8 @@ define([
   'controller/homeController',
   'controller/libsListController',
   'controller/libsDetailController',
+  'controller/snippetsListController',
+  'controller/snippetsDetailController',
   'controller/aboutusController'
   // 'modules/flyer-plaza/index',
 ], function (app) {
@@ -32,6 +34,19 @@ define([
         url: '/:id',
         templateUrl: '/views/libsList.detail.html',
         controller: 'libsDetailController',
+        pageTitle: '前端组件类库'
+      })
+      .state('snippets', {
+        url: '/snippets?type',
+        templateUrl: '/views/snippetsList.html',
+        controller: 'snippetsListController',
+        pageTitle: '前端组件类库',
+        reloadOnSearch: false
+      })
+      .state('snippets.detail', {
+        url: '/:id',
+        templateUrl: '/views/snippetsList.detail.html',
+        controller: 'snippetsDetailController',
         pageTitle: '前端组件类库'
       })
       .state('aboutus', {
