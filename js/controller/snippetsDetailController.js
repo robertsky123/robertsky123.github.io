@@ -6,6 +6,11 @@ define(['app','userInfo', "service/snippetsDetail", "service/snippetsList"], fun
 
     $snippetDetail.find(id, function(error , data){
       $scope.content = marked(data);
+      setTimeout(function(){
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      },0);
     });
 
     $snippetList.find(function(error , data){

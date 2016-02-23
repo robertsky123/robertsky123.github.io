@@ -1,5 +1,5 @@
 ## 参考网址
-* [npm 包地址]()
+* [npm 包地址](https://www.npmjs.com/package/gulp-rev-all)
 * [教程](http://segmentfault.com/a/1190000002932998)
 
 

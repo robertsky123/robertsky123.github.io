@@ -6,6 +6,12 @@ define(['app','userInfo', "service/libsDetail", "service/libsList"], function (a
 
     $libDetail.find(id, function(error , data){
       $scope.content = marked(data);
+      setTimeout(function(){
+        $('pre code').each(function(i, block) {
+          hljs.highlightBlock(block);
+        });
+      },0);
+      
     });
 
     $libList.find(function(error , data){
